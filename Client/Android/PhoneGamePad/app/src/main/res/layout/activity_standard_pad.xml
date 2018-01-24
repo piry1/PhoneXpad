@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:keepScreenOn="true"
+    tools:context="com.example.piry3.phonegamepad.StandardPad">
+
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/joystickView_left"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        custom:JV_backgroundColor="#009688"
+        custom:JV_borderColor="#00796B"
+        custom:JV_borderWidth="8dp"
+        custom:JV_buttonColor="#F56476"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintLeft_toLeftOf="parent" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/joystickView_right"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        custom:JV_backgroundColor="#009688"
+        custom:JV_borderColor="#00796B"
+        custom:JV_borderWidth="8dp"
+        custom:JV_buttonColor="#F56476"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/buttonY"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_button_y"
+        android:padding="0dp"
+        android:tag="Ybtn"
+        android:text="Y"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonX"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/round_button_x"
+        android:padding="0dp"
+        android:tag="Xbtn"
+        android:text="X"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintRight_toLeftOf="@+id/buttonB"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="83dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/round_button_a"
+        android:padding="0dp"
+        android:tag="Abtn"
+        android:text="A"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonY" />
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/round_button_b"
+        android:padding="0dp"
+        android:tag="Bbtn"
+        android:text="B"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:onClick="switchOnClick"
+        android:text="Switch"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/joystickView_left"
+        app:layout_constraintRight_toLeftOf="@+id/joystickView_right" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:tag="Start"
+        android:text="Start"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSwitch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/joystickView_left"
+        app:layout_constraintRight_toLeftOf="@+id/joystickView_right" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:tag="Back"
+        android:text="Back"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/joystickView_left"
+        app:layout_constraintRight_toLeftOf="@+id/joystickView_right" />
+
+    <ImageButton
+        android:id="@+id/buttonUp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:tag="arrowUp"
+        android:text="UP"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toRightOf="@+id/buttonLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrowup" />
+
+    <Button
+        android:id="@+id/buttonLB"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorAccent"
+        android:padding="0dp"
+        android:tag="LeftBumper"
+        android:text="LB"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRB"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorAccent"
+        android:padding="0dp"
+        android:tag="RightBumper"
+        android:text="RB"
+        android:textColor="@android:color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonDown"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:keepScreenOn="true"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:tag="arrowDown"
+        android:text="Down"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toRightOf="@+id/buttonLeft"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUp"
+        app:srcCompat="@drawable/arrowdown" />
+
+    <ImageButton
+        android:id="@+id/buttonLeft"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:tag="arrowLeft"
+        android:text="Left"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrowleft"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <ImageButton
+        android:id="@+id/buttonRight"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:tag="arrowRight"
+        android:text="Right"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toRightOf="@+id/buttonUp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrowright" />
+
+    <ImageView
+        android:id="@+id/AccImageView"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/acc" />
+
+</android.support.constraint.ConstraintLayout>
