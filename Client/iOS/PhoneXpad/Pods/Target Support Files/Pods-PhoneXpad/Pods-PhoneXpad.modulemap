@@ -1,0 +1,6 @@
+framework module Pods_PhoneXpad {
+  umbrella header "Pods-PhoneXpad-umbrella.h"
+
+  export *
+  module * { export * }
+}

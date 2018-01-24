@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		842A78E0201685A000483C92 /* IpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A78DF201685A000483C92 /* IpManager.swift */; };
+		842A78E22016988500483C92 /* CommunicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A78E12016988500483C92 /* CommunicationData.swift */; };
+		842A78E42016A53500483C92 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 842A78E32016A53500483C92 /* logo.png */; };
+		842A78E62016AE8F00483C92 /* app-store.png in Resources */ = {isa = PBXBuildFile; fileRef = 842A78E52016AE8F00483C92 /* app-store.png */; };
+		8436D1882014C58C004C5B29 /* PadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436D1872014C58C004C5B29 /* PadManager.swift */; };
+		844071862016113A007BDD95 /* NetworkSniffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844071852016113A007BDD95 /* NetworkSniffer.swift */; };
+		84407188201639F8007BDD95 /* PhoneXpadServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84407187201639F8007BDD95 /* PhoneXpadServer.swift */; };
+		84789B002016525E001605D4 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84789AFF2016525E001605D4 /* ServerListViewController.swift */; };
+		84B5ABF62013C4C50098ECD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5ABF52013C4C50098ECD7 /* AppDelegate.swift */; };
+		84B5ABF82013C4C50098ECD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5ABF72013C4C50098ECD7 /* ViewController.swift */; };
+		84B5ABFB2013C4C50098ECD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B5ABF92013C4C50098ECD7 /* Main.storyboard */; };
+		84B5ABFD2013C4C50098ECD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B5ABFC2013C4C50098ECD7 /* Assets.xcassets */; };
+		84B5AC002013C4C50098ECD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B5ABFE2013C4C50098ECD7 /* LaunchScreen.storyboard */; };
+		84B5AC0B2013C4C50098ECD7 /* PhoneXpadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5AC0A2013C4C50098ECD7 /* PhoneXpadTests.swift */; };
+		84B5AC162013C4C50098ECD7 /* PhoneXpadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5AC152013C4C50098ECD7 /* PhoneXpadUITests.swift */; };
+		84B5AC252013E2EA0098ECD7 /* Xpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5AC242013E2EA0098ECD7 /* Xpad.swift */; };
+		8916D6D4DCF6B762368FD059 /* Pods_PhoneXpad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F120D40F930E5B40A297B1F8 /* Pods_PhoneXpad.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84B5AC072013C4C50098ECD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B5ABEA2013C4C50098ECD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B5ABF12013C4C50098ECD7;
+			remoteInfo = PhoneXpad;
+		};
+		84B5AC122013C4C50098ECD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B5ABEA2013C4C50098ECD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B5ABF12013C4C50098ECD7;
+			remoteInfo = PhoneXpad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5030114B281D2D64E1F96877 /* Pods-PhoneXpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneXpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneXpad/Pods-PhoneXpad.release.xcconfig"; sourceTree = "<group>"; };
+		842A78DF201685A000483C92 /* IpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpManager.swift; sourceTree = "<group>"; };
+		842A78E12016988500483C92 /* CommunicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationData.swift; sourceTree = "<group>"; };
+		842A78E32016A53500483C92 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		842A78E52016AE8F00483C92 /* app-store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-store.png"; sourceTree = "<group>"; };
+		8436D1872014C58C004C5B29 /* PadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadManager.swift; sourceTree = "<group>"; };
+		844071852016113A007BDD95 /* NetworkSniffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSniffer.swift; sourceTree = "<group>"; };
+		84407187201639F8007BDD95 /* PhoneXpadServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneXpadServer.swift; sourceTree = "<group>"; };
+		84438EE4201401B0006E7436 /* PhoneXpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneXpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84438EE5201401B0006E7436 /* PhoneXpadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneXpadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84438EE6201401B0006E7436 /* PhoneXpadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneXpadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84789AFF2016525E001605D4 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
+		84B5ABF52013C4C50098ECD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84B5ABF72013C4C50098ECD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84B5ABFA2013C4C50098ECD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84B5ABFC2013C4C50098ECD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84B5ABFF2013C4C50098ECD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84B5AC012013C4C50098ECD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B5AC0A2013C4C50098ECD7 /* PhoneXpadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneXpadTests.swift; sourceTree = "<group>"; };
+		84B5AC0C2013C4C50098ECD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B5AC152013C4C50098ECD7 /* PhoneXpadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneXpadUITests.swift; sourceTree = "<group>"; };
+		84B5AC172013C4C50098ECD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B5AC242013E2EA0098ECD7 /* Xpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xpad.swift; sourceTree = "<group>"; };
+		BCF798C16E968B81F6F60CB4 /* Pods-PhoneXpad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneXpad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneXpad/Pods-PhoneXpad.debug.xcconfig"; sourceTree = "<group>"; };
+		F120D40F930E5B40A297B1F8 /* Pods_PhoneXpad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneXpad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84B5ABEF2013C4C50098ECD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8916D6D4DCF6B762368FD059 /* Pods_PhoneXpad.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B5AC032013C4C50098ECD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B5AC0E2013C4C50098ECD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AF6FA810E5844873BD7F9CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F120D40F930E5B40A297B1F8 /* Pods_PhoneXpad.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8436D1842014C3FC004C5B29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8436D1872014C58C004C5B29 /* PadManager.swift */,
+				844071852016113A007BDD95 /* NetworkSniffer.swift */,
+				842A78DF201685A000483C92 /* IpManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8436D1852014C41A004C5B29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84B5ABF72013C4C50098ECD7 /* ViewController.swift */,
+				84789AFF2016525E001605D4 /* ServerListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8436D1862014C432004C5B29 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				842A78E32016A53500483C92 /* logo.png */,
+				842A78E52016AE8F00483C92 /* app-store.png */,
+				84B5ABF52013C4C50098ECD7 /* AppDelegate.swift */,
+				84B5ABF92013C4C50098ECD7 /* Main.storyboard */,
+				84B5ABFC2013C4C50098ECD7 /* Assets.xcassets */,
+				84B5ABFE2013C4C50098ECD7 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		84B5ABE92013C4C50098ECD7 = {
+			isa = PBXGroup;
+			children = (
+				84B5ABF42013C4C50098ECD7 /* PhoneXpad */,
+				84B5AC092013C4C50098ECD7 /* PhoneXpadTests */,
+				84B5AC142013C4C50098ECD7 /* PhoneXpadUITests */,
+				B4D2174F39ECB91A0C723567 /* Pods */,
+				1AF6FA810E5844873BD7F9CB /* Frameworks */,
+				84438EE4201401B0006E7436 /* PhoneXpad.app */,
+				84438EE5201401B0006E7436 /* PhoneXpadTests.xctest */,
+				84438EE6201401B0006E7436 /* PhoneXpadUITests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		84B5ABF42013C4C50098ECD7 /* PhoneXpad */ = {
+			isa = PBXGroup;
+			children = (
+				84B5AC012013C4C50098ECD7 /* Info.plist */,
+				8436D1852014C41A004C5B29 /* View */,
+				8436D1842014C3FC004C5B29 /* Controller */,
+				84B5AC232013E2820098ECD7 /* Model */,
+				8436D1862014C432004C5B29 /* Assets */,
+			);
+			path = PhoneXpad;
+			sourceTree = "<group>";
+		};
+		84B5AC092013C4C50098ECD7 /* PhoneXpadTests */ = {
+			isa = PBXGroup;
+			children = (
+				84B5AC0A2013C4C50098ECD7 /* PhoneXpadTests.swift */,
+				84B5AC0C2013C4C50098ECD7 /* Info.plist */,
+			);
+			path = PhoneXpadTests;
+			sourceTree = "<group>";
+		};
+		84B5AC142013C4C50098ECD7 /* PhoneXpadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84B5AC152013C4C50098ECD7 /* PhoneXpadUITests.swift */,
+				84B5AC172013C4C50098ECD7 /* Info.plist */,
+			);
+			path = PhoneXpadUITests;
+			sourceTree = "<group>";
+		};
+		84B5AC232013E2820098ECD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84B5AC242013E2EA0098ECD7 /* Xpad.swift */,
+				84407187201639F8007BDD95 /* PhoneXpadServer.swift */,
+				842A78E12016988500483C92 /* CommunicationData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4D2174F39ECB91A0C723567 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCF798C16E968B81F6F60CB4 /* Pods-PhoneXpad.debug.xcconfig */,
+				5030114B281D2D64E1F96877 /* Pods-PhoneXpad.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84B5ABF12013C4C50098ECD7 /* PhoneXpad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B5AC1A2013C4C50098ECD7 /* Build configuration list for PBXNativeTarget "PhoneXpad" */;
+			buildPhases = (
+				8E414E30E5DF7EA87717407A /* [CP] Check Pods Manifest.lock */,
+				84B5ABEE2013C4C50098ECD7 /* Sources */,
+				84B5ABEF2013C4C50098ECD7 /* Frameworks */,
+				84B5ABF02013C4C50098ECD7 /* Resources */,
+				8503CEDB8C29442C3BC55A11 /* [CP] Embed Pods Frameworks */,
+				C73C3E09A8A96F40B0C63A4C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhoneXpad;
+			productName = PhoneXpad;
+			productReference = 84438EE4201401B0006E7436 /* PhoneXpad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84B5AC052013C4C50098ECD7 /* PhoneXpadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B5AC1D2013C4C50098ECD7 /* Build configuration list for PBXNativeTarget "PhoneXpadTests" */;
+			buildPhases = (
+				84B5AC022013C4C50098ECD7 /* Sources */,
+				84B5AC032013C4C50098ECD7 /* Frameworks */,
+				84B5AC042013C4C50098ECD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84B5AC082013C4C50098ECD7 /* PBXTargetDependency */,
+			);
+			name = PhoneXpadTests;
+			productName = PhoneXpadTests;
+			productReference = 84438EE5201401B0006E7436 /* PhoneXpadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84B5AC102013C4C50098ECD7 /* PhoneXpadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B5AC202013C4C50098ECD7 /* Build configuration list for PBXNativeTarget "PhoneXpadUITests" */;
+			buildPhases = (
+				84B5AC0D2013C4C50098ECD7 /* Sources */,
+				84B5AC0E2013C4C50098ECD7 /* Frameworks */,
+				84B5AC0F2013C4C50098ECD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84B5AC132013C4C50098ECD7 /* PBXTargetDependency */,
+			);
+			name = PhoneXpadUITests;
+			productName = PhoneXpadUITests;
+			productReference = 84438EE6201401B0006E7436 /* PhoneXpadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84B5ABEA2013C4C50098ECD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Admin;
+				TargetAttributes = {
+					84B5ABF12013C4C50098ECD7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					84B5AC052013C4C50098ECD7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84B5ABF12013C4C50098ECD7;
+					};
+					84B5AC102013C4C50098ECD7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84B5ABF12013C4C50098ECD7;
+					};
+				};
+			};
+			buildConfigurationList = 84B5ABED2013C4C50098ECD7 /* Build configuration list for PBXProject "PhoneXpad" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84B5ABE92013C4C50098ECD7;
+			productRefGroup = 84B5ABE92013C4C50098ECD7;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84B5ABF12013C4C50098ECD7 /* PhoneXpad */,
+				84B5AC052013C4C50098ECD7 /* PhoneXpadTests */,
+				84B5AC102013C4C50098ECD7 /* PhoneXpadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84B5ABF02013C4C50098ECD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842A78E42016A53500483C92 /* logo.png in Resources */,
+				84B5AC002013C4C50098ECD7 /* LaunchScreen.storyboard in Resources */,
+				84B5ABFD2013C4C50098ECD7 /* Assets.xcassets in Resources */,
+				842A78E62016AE8F00483C92 /* app-store.png in Resources */,
+				84B5ABFB2013C4C50098ECD7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B5AC042013C4C50098ECD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B5AC0F2013C4C50098ECD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8503CEDB8C29442C3BC55A11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PhoneXpad/Pods-PhoneXpad-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PlainPing/PlainPing.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlainPing.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoneXpad/Pods-PhoneXpad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E414E30E5DF7EA87717407A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhoneXpad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C73C3E09A8A96F40B0C63A4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoneXpad/Pods-PhoneXpad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84B5ABEE2013C4C50098ECD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844071862016113A007BDD95 /* NetworkSniffer.swift in Sources */,
+				84789B002016525E001605D4 /* ServerListViewController.swift in Sources */,
+				84B5AC252013E2EA0098ECD7 /* Xpad.swift in Sources */,
+				842A78E22016988500483C92 /* CommunicationData.swift in Sources */,
+				84B5ABF82013C4C50098ECD7 /* ViewController.swift in Sources */,
+				84B5ABF62013C4C50098ECD7 /* AppDelegate.swift in Sources */,
+				84407188201639F8007BDD95 /* PhoneXpadServer.swift in Sources */,
+				842A78E0201685A000483C92 /* IpManager.swift in Sources */,
+				8436D1882014C58C004C5B29 /* PadManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B5AC022013C4C50098ECD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B5AC0B2013C4C50098ECD7 /* PhoneXpadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B5AC0D2013C4C50098ECD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B5AC162013C4C50098ECD7 /* PhoneXpadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84B5AC082013C4C50098ECD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B5ABF12013C4C50098ECD7 /* PhoneXpad */;
+			targetProxy = 84B5AC072013C4C50098ECD7 /* PBXContainerItemProxy */;
+		};
+		84B5AC132013C4C50098ECD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B5ABF12013C4C50098ECD7 /* PhoneXpad */;
+			targetProxy = 84B5AC122013C4C50098ECD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84B5ABF92013C4C50098ECD7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84B5ABFA2013C4C50098ECD7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84B5ABFE2013C4C50098ECD7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84B5ABFF2013C4C50098ECD7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84B5AC182013C4C50098ECD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84B5AC192013C4C50098ECD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84B5AC1B2013C4C50098ECD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF798C16E968B81F6F60CB4 /* Pods-PhoneXpad.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64H45H9F7C;
+				INFOPLIST_FILE = PhoneXpad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piry.PhoneXpad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		84B5AC1C2013C4C50098ECD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5030114B281D2D64E1F96877 /* Pods-PhoneXpad.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64H45H9F7C;
+				INFOPLIST_FILE = PhoneXpad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piry.PhoneXpad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		84B5AC1E2013C4C50098ECD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64H45H9F7C;
+				INFOPLIST_FILE = PhoneXpadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piry.PhoneXpadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhoneXpad.app/PhoneXpad";
+			};
+			name = Debug;
+		};
+		84B5AC1F2013C4C50098ECD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64H45H9F7C;
+				INFOPLIST_FILE = PhoneXpadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piry.PhoneXpadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhoneXpad.app/PhoneXpad";
+			};
+			name = Release;
+		};
+		84B5AC212013C4C50098ECD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64H45H9F7C;
+				INFOPLIST_FILE = PhoneXpadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piry.PhoneXpadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhoneXpad;
+			};
+			name = Debug;
+		};
+		84B5AC222013C4C50098ECD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64H45H9F7C;
+				INFOPLIST_FILE = PhoneXpadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piry.PhoneXpadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhoneXpad;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84B5ABED2013C4C50098ECD7 /* Build configuration list for PBXProject "PhoneXpad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B5AC182013C4C50098ECD7 /* Debug */,
+				84B5AC192013C4C50098ECD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B5AC1A2013C4C50098ECD7 /* Build configuration list for PBXNativeTarget "PhoneXpad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B5AC1B2013C4C50098ECD7 /* Debug */,
+				84B5AC1C2013C4C50098ECD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B5AC1D2013C4C50098ECD7 /* Build configuration list for PBXNativeTarget "PhoneXpadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B5AC1E2013C4C50098ECD7 /* Debug */,
+				84B5AC1F2013C4C50098ECD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B5AC202013C4C50098ECD7 /* Build configuration list for PBXNativeTarget "PhoneXpadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B5AC212013C4C50098ECD7 /* Debug */,
+				84B5AC222013C4C50098ECD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84B5ABEA2013C4C50098ECD7 /* Project object */;
+}

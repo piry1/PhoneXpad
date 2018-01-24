@@ -1,0 +1,15 @@
+PODS:
+  - PlainPing (0.4)
+  - SwiftSocket (2.0.2)
+
+DEPENDENCIES:
+  - PlainPing
+  - SwiftSocket
+
+SPEC CHECKSUMS:
+  PlainPing: 17845ab9e2b41460edc0faa94fd02093fa17d236
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
+
+PODFILE CHECKSUM: f8ea0c38ac0fe42f75e7ca798504e4fc45994a66
+
+COCOAPODS: 1.4.0
