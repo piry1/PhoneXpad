@@ -13,9 +13,10 @@ public class PhoneXpadServer : NSObject, NSCoding {
     public var Ip : String? = nil
     public var isOnline : Bool? = nil
     
-    init(name: String, ip: String) {
-        Name = name
-        Ip = ip
+    init(name: String, ip: String, isOnline: Bool = true) {
+        self.Name = name
+        self.Ip = ip
+        self.isOnline = isOnline
     }
     
     public func encode(with aCoder: NSCoder) {

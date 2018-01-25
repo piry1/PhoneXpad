@@ -16,6 +16,7 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     var networkSniffer = NetworkSniffer()
 
     @IBAction func SearchBtnClick(_ sender: UIButton) {
+        progressView.progress = 0.0
         tableView.reloadData()
         Sniff()
     }
@@ -27,18 +28,20 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private func CheckIfServerIsOnline(server: PhoneXpadServer, cell: UITableViewCell) -> UITableViewCell {
         
-        var isOnline = false
+        server.isOnline = false
         
         if let name = networkSniffer.IsServiceOnline(ip: server.Ip!, port: Int32(SocketData.port!), message: SocketData.connectionMessage){
-            isOnline =  name == server.Name
+            server.isOnline =  name == server.Name
         }
         
-        if isOnline {
+        if server.isOnline! {
             cell.detailTextLabel?.text = server.Ip! + " - online"
-            cell.detailTextLabel?.textColor = UIColor.green
+            cell.detailTextLabel?.textColor = UIColor(red:0.26, green:0.96, blue:0.77, alpha:1.0) // green
+            cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         } else {
             cell.detailTextLabel?.text = server.Ip! + " - offline"
-            cell.detailTextLabel?.textColor = UIColor.red
+            cell.detailTextLabel?.textColor = UIColor(red:0.73, green:0.16, blue:0.19, alpha:1.0) // red
+            cell.accessoryType = UITableViewCellAccessoryType.none
         }
         
         return cell
@@ -96,10 +99,29 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         if let pxs = selectedServer {
+            guard pxs.isOnline! else { return }
             SocketData.serverName = pxs.Name
             SocketData.serverIp = pxs.Ip
             networkSniffer.StopSniffing()
             performSegue(withIdentifier: "controller", sender: self)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section == 0{
+            return true
+        }
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            if indexPath.section == 0{
+                SocketData.removeAt(index: indexPath.row)
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.endUpdates()
+            }
         }
     }
     
@@ -122,6 +144,7 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
         Sniff()
     }
     

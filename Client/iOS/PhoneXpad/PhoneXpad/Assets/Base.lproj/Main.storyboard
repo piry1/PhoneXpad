@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="444"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="cell" textLabel="UsX-uW-gNp" detailTextLabel="Prj-NY-QH2" style="IBUITableViewCellStyleSubtitle" id="rnk-8k-WtU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="cell" textLabel="UsX-uW-gNp" detailTextLabel="Prj-NY-QH2" style="IBUITableViewCellStyleSubtitle" id="rnk-8k-WtU">
                                         <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rnk-8k-WtU" id="6D6-fM-ebS">
@@ -101,7 +101,7 @@
                                     <action selector="SearchBtnClick:" destination="oFz-fM-szN" eventType="touchUpInside" id="vL2-LM-m7i"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="75c-pQ-c4l">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="75c-pQ-c4l">
                                 <rect key="frame" x="0.0" y="444" width="320" height="2"/>
                             </progressView>
                         </subviews>

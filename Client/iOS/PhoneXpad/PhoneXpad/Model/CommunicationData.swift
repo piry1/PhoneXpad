@@ -29,8 +29,7 @@ public class SocketData {
             recentlyConnected = NSKeyedUnarchiver.unarchiveObject(with:  data) as? [PhoneXpadServer]
         } else {
             recentlyConnected = [PhoneXpadServer]()
-            let encodedData = NSKeyedArchiver.archivedData(withRootObject: recentlyConnected!)
-            UserDefaults.standard.set(encodedData, forKey: "recentlyConnected")
+            saveRecentlyConnected()
         }
     }
     
@@ -50,6 +49,15 @@ public class SocketData {
         
         guard !(recentlyConnected?.contains(pxps))! else { return }
         recentlyConnected!.append(pxps)
+        saveRecentlyConnected()
+    }
+
+    public static func removeAt(index: Int){
+        recentlyConnected?.remove(at: index)
+        saveRecentlyConnected()
+    }
+    
+    private static func saveRecentlyConnected(){
         let encodedData = NSKeyedArchiver.archivedData(withRootObject: recentlyConnected!)
         UserDefaults.standard.set(encodedData, forKey: "recentlyConnected")
     }
