@@ -14,7 +14,7 @@ import CoreMotion
 public class PadManager {
     
     public  var xpad: Xpad = Xpad(deviceId: UIDevice.current.identifierForVendor!.uuidString)
-    private let client = TCPClient(address: CommunicationData.serverIp!, port: Int32(CommunicationData.port!))
+    private let client = TCPClient(address: SocketData.serverIp!, port: Int32(SocketData.port!))
    // private let client = TCPClient(address: "172.20.10.2", port: 1234)
     private var timer = Timer()
     private var timer2 = Timer()
@@ -28,7 +28,7 @@ public class PadManager {
     }
     
     // send xpad status to server app
-    public func StartCommunication() {
+    public func StartCommunicationWithServer() {
         timer.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true) { [weak self] _ in
             self?.SendMessage(msg: (self?.xpad.toString())!)
@@ -73,12 +73,12 @@ public class PadManager {
     }
     
     // stop sending xpad status
-    public func StopCommunication(){
+    public func StopCommunicationWithServer(){
         stopTimer()
     }
     
     public func DisconnectPad() {
-        StopCommunication()
+        StopCommunicationWithServer()
         SendMessage(msg: xpad.DisconnectString())
     }
     

@@ -104,14 +104,14 @@ public class NetworkSniffer {
     }
     
     /** chceck if service is online on specified port */
-    private func IsServiceOnline(ip: String, port : Int32, message: String) -> String? {
+    public func IsServiceOnline(ip: String, port : Int32, message: String, timeout: Int = 1) -> String? {
         let client = TCPClient(address: ip, port: port)
         
-        switch client.connect(timeout: 1) {
+        switch client.connect(timeout: timeout) {
         case .success:
             switch client.send(string: message) {
             case .success:
-                guard let data = client.read(128, timeout: 1) else { return nil }
+                guard let data = client.read(128, timeout: timeout) else { return nil }
                 if let response = String(bytes: data, encoding: .utf8) {
                     print("response: " + response)
                     return response

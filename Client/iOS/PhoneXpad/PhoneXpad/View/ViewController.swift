@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         padManager.ConnectPad()
-        padManager.StartCommunication()
+        padManager.StartCommunicationWithServer()
     }
     
     @IBAction func BtnUp(_ sender: UIButton) {

@@ -11,11 +11,46 @@ import Foundation
 /**
  Data used in communication with PC server
  */
-public class CommunicationData {
+public class SocketData {
     /** Server IP adress */
     public static var serverIp : String? = nil
     /** Service port */
     public static var port: Int? = 1234
     /** Service name */
     public static var serverName : String? = nil
+    /** Message required to start communication */
+    public static let connectionMessage = "ppm"
+    
+    private static var recentlyConnected: [PhoneXpadServer]? = nil
+    
+    private static func loadRecentlyConnected(){
+        
+        if let data = UserDefaults.standard.object(forKey: "recentlyConnected") as! Data? {
+            recentlyConnected = NSKeyedUnarchiver.unarchiveObject(with:  data) as? [PhoneXpadServer]
+        } else {
+            recentlyConnected = [PhoneXpadServer]()
+            let encodedData = NSKeyedArchiver.archivedData(withRootObject: recentlyConnected!)
+            UserDefaults.standard.set(encodedData, forKey: "recentlyConnected")
+        }
+    }
+    
+    public static func getRecentlyConnected() -> [PhoneXpadServer] {
+        
+        if recentlyConnected == nil {
+            loadRecentlyConnected()
+        }
+        return recentlyConnected!
+    }
+    
+    public static func appendServer(pxps: PhoneXpadServer) {
+        
+        if recentlyConnected == nil {
+            loadRecentlyConnected()
+        }
+        
+        guard !(recentlyConnected?.contains(pxps))! else { return }
+        recentlyConnected!.append(pxps)
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: recentlyConnected!)
+        UserDefaults.standard.set(encodedData, forKey: "recentlyConnected")
+    }
 }
