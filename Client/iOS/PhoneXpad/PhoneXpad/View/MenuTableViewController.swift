@@ -10,14 +10,37 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
 
+    @IBOutlet weak var connectedPC: UITableViewCell!
+    
+    private func checkConnectedServer(){
+        
+        let serverName = SocketData.serverName
+        let serverIp = SocketData.serverIp
+        
+        if serverIp != nil && serverName != nil {
+            connectedPC.textLabel?.text = serverName
+            connectedPC.detailTextLabel?.text = serverIp
+            connectedPC.imageView?.image = UIImage(named: "pc-on")
+            connectedPC.accessoryType = UITableViewCellAccessoryType.checkmark
+        } else{
+            connectedPC.textLabel?.text = "No connected PC"
+            connectedPC.detailTextLabel?.text = "0.0.0.0"
+            connectedPC.imageView?.image = UIImage(named: "pc-off")
+            connectedPC.accessoryType = UITableViewCellAccessoryType.none
+        }
+        
+    }
+    
+    
+    //MARK: - life cycle methods
+    
+    override func viewWillAppear(_ animated: Bool) {
+        checkConnectedServer()
+        print("checking server")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//tableView.backgroundView = UIImageView(image: UIImage(named: "nintendo_controller"))
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {

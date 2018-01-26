@@ -102,7 +102,7 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
             SocketData.serverName = pxs.Name
             SocketData.serverIp = pxs.Ip
             networkSniffer.StopSniffing()
-            performSegue(withIdentifier: "controller", sender: self)
+            self.navigationController?.popViewController(animated: true)
         }
     }
     

@@ -20,6 +20,7 @@
 		845CCE8B201B5E2D00EE76BC /* xboxpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE84201B5E2C00EE76BC /* xboxpad.png */; };
 		845CCE8C201B5E2D00EE76BC /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE85201B5E2C00EE76BC /* settings.png */; };
 		845CCE8D201B5E2D00EE76BC /* wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE86201B5E2C00EE76BC /* wifi.png */; };
+		845CCE8F201B688B00EE76BC /* scissors.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE8E201B688900EE76BC /* scissors.png */; };
 		84789B002016525E001605D4 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84789AFF2016525E001605D4 /* ServerListViewController.swift */; };
 		84B5ABF62013C4C50098ECD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5ABF52013C4C50098ECD7 /* AppDelegate.swift */; };
 		84B5ABF82013C4C50098ECD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5ABF72013C4C50098ECD7 /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		845CCE84201B5E2C00EE76BC /* xboxpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xboxpad.png; sourceTree = "<group>"; };
 		845CCE85201B5E2C00EE76BC /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		845CCE86201B5E2C00EE76BC /* wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi.png; sourceTree = "<group>"; };
+		845CCE8E201B688900EE76BC /* scissors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissors.png; sourceTree = "<group>"; };
 		84789AFF2016525E001605D4 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
 		84B5ABF52013C4C50098ECD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B5ABF72013C4C50098ECD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		84595733201A894800049620 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				845CCE8E201B688900EE76BC /* scissors.png */,
 				845CCE81201B5E2C00EE76BC /* bluetooth.png */,
 				845CCE80201B5E2B00EE76BC /* joystick.png */,
 				845CCE82201B5E2C00EE76BC /* pc-off.png */,
@@ -346,6 +349,7 @@
 				845CCE8C201B5E2D00EE76BC /* settings.png in Resources */,
 				845CCE8A201B5E2D00EE76BC /* pc-on.png in Resources */,
 				845CCE87201B5E2D00EE76BC /* joystick.png in Resources */,
+				845CCE8F201B688B00EE76BC /* scissors.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
