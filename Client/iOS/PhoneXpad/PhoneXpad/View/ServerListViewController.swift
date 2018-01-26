@@ -24,12 +24,12 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func checkRecentlyConnected(){
-        timer.invalidate()
         
+        timer.invalidate()
         var i = recentlyConnected.count - 1
         
-        timer  = Timer.scheduledTimer(withTimeInterval: 0.1 , repeats: true) { [weak self] _ in
-            guard i > 0 else {
+        timer  = Timer.scheduledTimer(withTimeInterval: 0.5 , repeats: true) { [weak self] _ in
+            guard i >= 0 else {
                 self?.timer.invalidate()
                 return
             }
@@ -37,8 +37,15 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
             if let name = self?.networkSniffer.IsServiceOnline(ip: (self?.recentlyConnected[i].Ip!)!, port: Int32(SocketData.port!), message: SocketData.connectionMessage){
                 self?.recentlyConnected[i].isOnline =  name == self?.recentlyConnected[i].Name
             }
+            
+            if (self?.recentlyConnected[i].isOnline)! {
+                self?.tableView.beginUpdates()
+                let ip = IndexPath(row: i,section: 0)
+                self?.tableView.reloadRows(at: [ip], with: UITableViewRowAnimation.automatic)
+                self?.tableView.endUpdates()
+            }
+      
             i -= 1
-            self?.tableView.reloadData()
         }
     }
     
@@ -137,6 +144,7 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
         if editingStyle == .delete{
             if indexPath.section == 0{
                 SocketData.removeAt(index: indexPath.row)
+                recentlyConnected = SocketData.getRecentlyConnected()
                 tableView.beginUpdates()
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 tableView.endUpdates()
@@ -163,10 +171,16 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        recentlyConnected = SocketData.getRecentlyConnected()
         tableView.reloadData()
         checkRecentlyConnected()
         Sniff()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+          recentlyConnected = SocketData.getRecentlyConnected()
+        for i in 0...recentlyConnected.count - 1 {
+            recentlyConnected[i].isOnline = false
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

@@ -48,6 +48,7 @@ public class SocketData {
         }
         
         guard !(recentlyConnected?.contains(pxps))! else { return }
+        pxps.isOnline = false
         recentlyConnected!.append(pxps)
         saveRecentlyConnected()
     }
