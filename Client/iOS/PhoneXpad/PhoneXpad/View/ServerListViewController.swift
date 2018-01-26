@@ -29,18 +29,17 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     private func CheckIfServerIsOnline(server: PhoneXpadServer, cell: UITableViewCell) -> UITableViewCell {
         
         server.isOnline = false
+        cell.detailTextLabel?.text = server.Ip!
         
         if let name = networkSniffer.IsServiceOnline(ip: server.Ip!, port: Int32(SocketData.port!), message: SocketData.connectionMessage){
             server.isOnline =  name == server.Name
         }
         
         if server.isOnline! {
-            cell.detailTextLabel?.text = server.Ip! + " - online"
-            cell.detailTextLabel?.textColor = UIColor(red:0.26, green:0.96, blue:0.77, alpha:1.0) // green
+            cell.detailTextLabel?.textColor = UIColor(red:0.10, green:0.57, blue:0.48, alpha:1.0) // green
             cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         } else {
-            cell.detailTextLabel?.text = server.Ip! + " - offline"
-            cell.detailTextLabel?.textColor = UIColor(red:0.73, green:0.16, blue:0.19, alpha:1.0) // red
+            cell.detailTextLabel?.textColor = UIColor.gray
             cell.accessoryType = UITableViewCellAccessoryType.none
         }
         

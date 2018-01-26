@@ -38,15 +38,15 @@ public class PadManager {
     private func StartMotionMonitorWithIntervals(){
         
         timer2.invalidate()
-        timer2  = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
-            self?.i += 1
-            let pos = (self?.xpad.RightStickX)! < Float(0) ? -(self?.xpad.RightStickX)! : self?.xpad.RightStickX
+        timer2  = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
+            //self?.i += 1
+            //let pos = (self?.xpad.RightStickX)! < Float(0) ? -(self?.xpad.RightStickX)! : self?.xpad.RightStickX
         
-            if self!.i > 10 && pos! < Float(0.01) {
+           // if self!.i > 10 && pos! < Float(0.01) {
                 self?.StartMotionMonitor()
-                self?.i = 0
-                print("reset")
-            }
+              //  self?.i = 0
+               // print("reset")
+           // }
         }
     }
     
@@ -57,7 +57,7 @@ public class PadManager {
             if let attitude = data?.attitude {
                // print(attitude.pitch)
                 self.xpad.RightStickY = self.ConvertMotion(rad : attitude.pitch)
-                self.xpad.RightStickX = self.ConvertMotion(rad : attitude.yaw)
+                self.xpad.RightStickX = self.ConvertMotion(rad : attitude.roll)
             }
         }
     }
@@ -101,17 +101,17 @@ public class PadManager {
         
         switch client.connect(timeout: 1) {
         case .success:
-            /*switch*/ client.send(string: msg) //{
-            /*case .success:
-                guard let data = client.read(128) else { return }
-                if !SetVibrations(data: data){
+            switch client.send(string: msg) {
+            case .success:
+                guard let data = client.read(128,timeout: 1) else { return }
+                if !SetVibrations(data: data) {
                     if let response = String(bytes: data, encoding: .utf8) {
                         print("response: " + response)
                     }
                 }
             case .failure(let error):
                 print(error)
-            }*/
+            }
         case .failure(let error):
             print(error)
         }

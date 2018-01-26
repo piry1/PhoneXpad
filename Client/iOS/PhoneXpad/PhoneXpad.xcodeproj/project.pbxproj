@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		842A78E0201685A000483C92 /* IpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A78DF201685A000483C92 /* IpManager.swift */; };
 		842A78E22016988500483C92 /* CommunicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A78E12016988500483C92 /* CommunicationData.swift */; };
-		842A78E42016A53500483C92 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 842A78E32016A53500483C92 /* logo.png */; };
-		842A78E62016AE8F00483C92 /* app-store.png in Resources */ = {isa = PBXBuildFile; fileRef = 842A78E52016AE8F00483C92 /* app-store.png */; };
 		8436D1882014C58C004C5B29 /* PadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436D1872014C58C004C5B29 /* PadManager.swift */; };
 		844071862016113A007BDD95 /* NetworkSniffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844071852016113A007BDD95 /* NetworkSniffer.swift */; };
 		84407188201639F8007BDD95 /* PhoneXpadServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84407187201639F8007BDD95 /* PhoneXpadServer.swift */; };
+		8459573B201A99E000049620 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459573A201A99E000049620 /* MenuTableViewController.swift */; };
+		845CCE87201B5E2D00EE76BC /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE80201B5E2B00EE76BC /* joystick.png */; };
+		845CCE88201B5E2D00EE76BC /* bluetooth.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE81201B5E2C00EE76BC /* bluetooth.png */; };
+		845CCE89201B5E2D00EE76BC /* pc-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE82201B5E2C00EE76BC /* pc-off.png */; };
+		845CCE8A201B5E2D00EE76BC /* pc-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE83201B5E2C00EE76BC /* pc-on.png */; };
+		845CCE8B201B5E2D00EE76BC /* xboxpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE84201B5E2C00EE76BC /* xboxpad.png */; };
+		845CCE8C201B5E2D00EE76BC /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE85201B5E2C00EE76BC /* settings.png */; };
+		845CCE8D201B5E2D00EE76BC /* wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CCE86201B5E2C00EE76BC /* wifi.png */; };
 		84789B002016525E001605D4 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84789AFF2016525E001605D4 /* ServerListViewController.swift */; };
 		84B5ABF62013C4C50098ECD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5ABF52013C4C50098ECD7 /* AppDelegate.swift */; };
 		84B5ABF82013C4C50098ECD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5ABF72013C4C50098ECD7 /* ViewController.swift */; };
@@ -47,14 +53,20 @@
 		5030114B281D2D64E1F96877 /* Pods-PhoneXpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneXpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneXpad/Pods-PhoneXpad.release.xcconfig"; sourceTree = "<group>"; };
 		842A78DF201685A000483C92 /* IpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpManager.swift; sourceTree = "<group>"; };
 		842A78E12016988500483C92 /* CommunicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationData.swift; sourceTree = "<group>"; };
-		842A78E32016A53500483C92 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		842A78E52016AE8F00483C92 /* app-store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-store.png"; sourceTree = "<group>"; };
 		8436D1872014C58C004C5B29 /* PadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadManager.swift; sourceTree = "<group>"; };
 		844071852016113A007BDD95 /* NetworkSniffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSniffer.swift; sourceTree = "<group>"; };
 		84407187201639F8007BDD95 /* PhoneXpadServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneXpadServer.swift; sourceTree = "<group>"; };
 		84438EE4201401B0006E7436 /* PhoneXpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneXpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84438EE5201401B0006E7436 /* PhoneXpadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneXpadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84438EE6201401B0006E7436 /* PhoneXpadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneXpadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8459573A201A99E000049620 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		845CCE80201B5E2B00EE76BC /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick.png; sourceTree = "<group>"; };
+		845CCE81201B5E2C00EE76BC /* bluetooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluetooth.png; sourceTree = "<group>"; };
+		845CCE82201B5E2C00EE76BC /* pc-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pc-off.png"; sourceTree = "<group>"; };
+		845CCE83201B5E2C00EE76BC /* pc-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pc-on.png"; sourceTree = "<group>"; };
+		845CCE84201B5E2C00EE76BC /* xboxpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xboxpad.png; sourceTree = "<group>"; };
+		845CCE85201B5E2C00EE76BC /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		845CCE86201B5E2C00EE76BC /* wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi.png; sourceTree = "<group>"; };
 		84789AFF2016525E001605D4 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
 		84B5ABF52013C4C50098ECD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B5ABF72013C4C50098ECD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +132,7 @@
 			children = (
 				84B5ABF72013C4C50098ECD7 /* ViewController.swift */,
 				84789AFF2016525E001605D4 /* ServerListViewController.swift */,
+				8459573A201A99E000049620 /* MenuTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,14 +140,27 @@
 		8436D1862014C432004C5B29 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				842A78E32016A53500483C92 /* logo.png */,
-				842A78E52016AE8F00483C92 /* app-store.png */,
+				84595733201A894800049620 /* Images */,
 				84B5ABF52013C4C50098ECD7 /* AppDelegate.swift */,
 				84B5ABF92013C4C50098ECD7 /* Main.storyboard */,
 				84B5ABFC2013C4C50098ECD7 /* Assets.xcassets */,
 				84B5ABFE2013C4C50098ECD7 /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		84595733201A894800049620 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				845CCE81201B5E2C00EE76BC /* bluetooth.png */,
+				845CCE80201B5E2B00EE76BC /* joystick.png */,
+				845CCE82201B5E2C00EE76BC /* pc-off.png */,
+				845CCE83201B5E2C00EE76BC /* pc-on.png */,
+				845CCE85201B5E2C00EE76BC /* settings.png */,
+				845CCE86201B5E2C00EE76BC /* wifi.png */,
+				845CCE84201B5E2C00EE76BC /* xboxpad.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		84B5ABE92013C4C50098ECD7 = {
@@ -310,11 +336,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842A78E42016A53500483C92 /* logo.png in Resources */,
+				845CCE89201B5E2D00EE76BC /* pc-off.png in Resources */,
 				84B5AC002013C4C50098ECD7 /* LaunchScreen.storyboard in Resources */,
 				84B5ABFD2013C4C50098ECD7 /* Assets.xcassets in Resources */,
-				842A78E62016AE8F00483C92 /* app-store.png in Resources */,
 				84B5ABFB2013C4C50098ECD7 /* Main.storyboard in Resources */,
+				845CCE8B201B5E2D00EE76BC /* xboxpad.png in Resources */,
+				845CCE88201B5E2D00EE76BC /* bluetooth.png in Resources */,
+				845CCE8D201B5E2D00EE76BC /* wifi.png in Resources */,
+				845CCE8C201B5E2D00EE76BC /* settings.png in Resources */,
+				845CCE8A201B5E2D00EE76BC /* pc-on.png in Resources */,
+				845CCE87201B5E2D00EE76BC /* joystick.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844071862016113A007BDD95 /* NetworkSniffer.swift in Sources */,
+				8459573B201A99E000049620 /* MenuTableViewController.swift in Sources */,
 				84789B002016525E001605D4 /* ServerListViewController.swift in Sources */,
 				84B5AC252013E2EA0098ECD7 /* Xpad.swift in Sources */,
 				842A78E22016988500483C92 /* CommunicationData.swift in Sources */,
