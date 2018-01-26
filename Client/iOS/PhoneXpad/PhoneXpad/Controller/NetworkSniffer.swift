@@ -18,8 +18,14 @@ public class NetworkSniffer {
     
     //MARK: - public vars
     /** Array of servers that weare found during sniffing process */
-    public var sniffedServers = [PhoneXpadServer]() {didSet {
-        self.tableView?.reloadData()
+    public var sniffedServers = [PhoneXpadServer]() {
+        didSet {
+            if sniffedServers.count > 0 {
+                self.tableView?.beginUpdates()
+                self.tableView?.insertRows(at: [IndexPath(row: sniffedServers.count - 1, section: 1)], with: .automatic)
+                self.tableView?.endUpdates()
+            }
+            //    self.tableView?.reloadData()
         }}    // list of ips that have online server
     
     //MARK: - private vars
