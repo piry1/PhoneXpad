@@ -13,12 +13,33 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var tableView: UITableView!
     
+    var recentlyConnected = SocketData.getRecentlyConnected()
     var networkSniffer = NetworkSniffer()
-
+    var timer = Timer()
+    
     @IBAction func SearchBtnClick(_ sender: UIButton) {
         progressView.progress = 0.0
         tableView.reloadData()
         Sniff()
+    }
+    
+    func checkRecentlyConnected(){
+        timer.invalidate()
+        
+        var i = recentlyConnected.count - 1
+        
+        timer  = Timer.scheduledTimer(withTimeInterval: 0.1 , repeats: true) { [weak self] _ in
+            guard i > 0 else {
+                self?.timer.invalidate()
+                return
+            }
+            
+            if let name = self?.networkSniffer.IsServiceOnline(ip: (self?.recentlyConnected[i].Ip!)!, port: Int32(SocketData.port!), message: SocketData.connectionMessage){
+                self?.recentlyConnected[i].isOnline =  name == self?.recentlyConnected[i].Name
+            }
+            i -= 1
+            self?.tableView.reloadData()
+        }
     }
     
     func Sniff() {
@@ -28,19 +49,14 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private func CheckIfServerIsOnline(server: PhoneXpadServer, cell: UITableViewCell) -> UITableViewCell {
         
-        server.isOnline = false
-        cell.detailTextLabel?.text = server.Ip!
-        
-        if let name = networkSniffer.IsServiceOnline(ip: server.Ip!, port: Int32(SocketData.port!), message: SocketData.connectionMessage){
-            server.isOnline =  name == server.Name
-        }
-        
         if server.isOnline! {
             cell.detailTextLabel?.textColor = UIColor(red:0.10, green:0.57, blue:0.48, alpha:1.0) // green
             cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+            cell.imageView?.image = UIImage(named: "pc-on")
         } else {
             cell.detailTextLabel?.textColor = UIColor.gray
             cell.accessoryType = UITableViewCellAccessoryType.none
+            cell.imageView?.image = UIImage(named: "pc-off")
         }
         
         return cell
@@ -51,7 +67,7 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return SocketData.getRecentlyConnected().count
+            return recentlyConnected.count
         case 1:
             return networkSniffer.sniffedServers.count
         default:
@@ -69,13 +85,16 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         switch indexPath.section {
         case 0:
-            let server = SocketData.getRecentlyConnected()[indexPath.row]
+            let server = recentlyConnected[indexPath.row]
             cell.textLabel?.text = server.Name
+            cell.detailTextLabel?.text = server.Ip!
             cell = CheckIfServerIsOnline(server: server, cell: cell)
         case 1:
             let server = networkSniffer.sniffedServers[indexPath.row]
             cell.textLabel?.text = server.Name
-            cell.detailTextLabel?.text = server.Ip
+            cell.detailTextLabel?.text = server.Ip!
+            cell.imageView?.image = UIImage(named: "pc-on")
+            cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         default:
             cell.textLabel?.text = "error"
         }
@@ -89,11 +108,12 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         switch indexPath.section {
         case 0:
-            selectedServer = SocketData.getRecentlyConnected()[indexPath.row]
+            selectedServer = recentlyConnected[indexPath.row]
         case 1:
             selectedServer = networkSniffer.sniffedServers[indexPath.row]
+            selectedServer?.isOnline = true
             SocketData.appendServer(pxps: selectedServer!)
-                default:
+        default:
             return
         }
         
@@ -143,7 +163,9 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        recentlyConnected = SocketData.getRecentlyConnected()
         tableView.reloadData()
+        checkRecentlyConnected()
         Sniff()
     }
     

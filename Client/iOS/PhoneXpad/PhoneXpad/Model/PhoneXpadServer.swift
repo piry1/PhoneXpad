@@ -13,7 +13,7 @@ public class PhoneXpadServer : NSObject, NSCoding {
     public var Ip : String? = nil
     public var isOnline : Bool? = nil
     
-    init(name: String, ip: String, isOnline: Bool = true) {
+    init(name: String, ip: String, isOnline: Bool = false) {
         self.Name = name
         self.Ip = ip
         self.isOnline = isOnline

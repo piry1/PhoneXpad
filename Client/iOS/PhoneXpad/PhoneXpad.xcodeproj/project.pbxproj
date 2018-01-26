@@ -122,8 +122,8 @@
 		8436D1842014C3FC004C5B29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8436D1872014C58C004C5B29 /* PadManager.swift */,
 				844071852016113A007BDD95 /* NetworkSniffer.swift */,
+				8436D1872014C58C004C5B29 /* PadManager.swift */,
 				842A78DF201685A000483C92 /* IpManager.swift */,
 			);
 			path = Controller;
